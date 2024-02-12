@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/easyqrcodejs/dist/easy.qrcode.min.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="centered-container">
+            <h2>QR Code Generator</h2>
+        <div class="form-group">
+            <br>
+            <input type="text" class="form-control" id="urlInput" placeholder="Enter URL here">
+        </div>
+        <div class="form-group">
+            <label for="resolutionInput">Resolution (pixels)</label>
+            <!-- Set default value to 600px -->
+            <input type="number" class="form-control" id="resolutionInput" placeholder="Resolution (pixels)" value="600" min="400" max="2000" step="10">
+        </div>
+        <div class="form-group">
+            <label class="custom-file-upload">
+                <input type="file" class="form-control-file" id="logoInput"  accept="image/*" style="display: none;">
+                Upload File (SVG, PNG, JPG)
+            </label>
+            
+        </div>
+        <button onclick="generateQRCode()" class="btn btn-primary">Generate QR Code</button>
+        <div id="qrcode"></div>
+        </div>
+
+        <!-- The Modal -->
+<div id="qrModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalQRCode"></div> <!-- Container for the QR code -->
+    </div>
+  </div>
+  
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
