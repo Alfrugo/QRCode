@@ -2,6 +2,7 @@ function generateQRCode() {
     var url = document.getElementById("urlInput").value;
     var resolution = document.getElementById("resolutionInput").value || 600; // Use default resolution if not specified
     var logoInput = document.getElementById("logoInput");
+    var selectedLogo = document.querySelector('input[name="predefinedLogo"]:checked')?.value;
 
     var options = {
         text: url,
@@ -20,17 +21,24 @@ function generateQRCode() {
 
         reader.onload = function(e) {
             options.logo = e.target.result;
-            options.logoWidth = parseInt(resolution) * 0.245;
-            options.logoHeight = parseInt(resolution) * 0.245;
-            options.logoBackgroundTransparent = false;
-
+            setLogoOptions(options, resolution);
             generateAndShowQRCode(options);
         };
 
         reader.readAsDataURL(logoInput.files[0]);
+    } else if (selectedLogo) {
+        options.logo = `./logos/${selectedLogo}`; // Adjust the path to your logos folder
+        setLogoOptions(options, resolution);
+        generateAndShowQRCode(options);
     } else {
         generateAndShowQRCode(options);
     }
+}
+
+function setLogoOptions(options, resolution) {
+    options.logoWidth = parseInt(resolution) * 0.245;
+    options.logoHeight = parseInt(resolution) * 0.245;
+    options.logoBackgroundTransparent = false;
 }
 
 function generateAndShowQRCode(options) {
@@ -40,7 +48,6 @@ function generateAndShowQRCode(options) {
     document.getElementById("qrModal").style.display = "block";
 }
 
-// Event listener for closing the modal
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
     document.getElementById("qrModal").style.display = "none";

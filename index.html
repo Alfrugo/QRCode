@@ -26,8 +26,26 @@
                 <input type="file" class="form-control-file" id="logoInput"  accept="image/*" style="display: none;">
                 Upload File (SVG, PNG, JPG)
             </label>
-            
         </div>
+
+        <div class="logo-selection">
+            <p>or</p>
+            <label>Select a logo:</label>
+            <div>
+                <input type="radio" id="logoMtm" name="predefinedLogo" value="mtm.svg">
+                <label for="logoMtm">MTM</label>
+            </div>
+            <div>
+                <input type="radio" id="logoWanda" name="predefinedLogo" value="wanda.svg">
+                <label for="logoWanda">Wanda</label>
+            </div>
+            <div>
+                <input type="radio" id="logoStat" name="predefinedLogo" value="stat.svg">
+                <label for="logoStat">Stat</label>
+            </div>
+          
+
+  
         <button onclick="generateQRCode()" class="btn btn-primary">Generate QR Code</button>
         <div id="qrcode"></div>
         </div>
