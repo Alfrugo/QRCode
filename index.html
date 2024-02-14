@@ -6,48 +6,90 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/easyqrcodejs/dist/easy.qrcode.min.js"></script>
     <link rel="stylesheet" href="./styles.css" />
+    <style>
+         /* Custom CSS */
+         .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .col-md-4 {
+            flex: 1;
+            margin-right: 20px; /* Adjust spacing between columns */
+        }
+        .column:last-child {
+            margin-right: 0; /* Remove margin from last column */
+        }
+    </style>
 
 </head>
 <body>
-    <div class="container">
-        <div class="centered-container">
-            <h2>QR Code Generator</h2>
-        <div class="form-group">
-            <br>
-            <input type="text" class="form-control" id="urlInput" placeholder="Enter URL here">
-        </div>
-        <div class="form-group">
-            <label for="resolutionInput">Resolution (pixels)</label>
-            <!-- Set default value to 600px -->
-            <input type="number" class="form-control" id="resolutionInput" placeholder="Resolution (pixels)" value="600" min="400" max="2000" step="10">
-        </div>
-        <div class="form-group">
-            <label class="custom-file-upload">
-                <input type="file" class="form-control-file" id="logoInput"  accept="image/*" style="display: none;">
-                Upload File (SVG, PNG, JPG)
-            </label>
-        </div>
+    <div>
+        <h2 class="text-center">QR Code Generator</h2>
+    </div>
+    
 
-        <div class="logo-selection">
-            <p>or</p>
-            <label>Select a logo:</label>
-            <div>
-                <input type="radio" id="logoMtm" name="predefinedLogo" value="mtm.svg">
-                <label for="logoMtm">MTM</label>
+    <div class="centered-container">
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="urlInput">Enter URL here</label>
+                    <input type="text" class="form-control" id="urlInput" placeholder="Enter URL here">
+                </div>
+                <div class="form-group">
+                    <label for="resolutionInput">Resolution (pixels)</label>
+                    <input type="number" class="form-control" id="resolutionInput" placeholder="Resolution (pixels)" value="600" min="400" max="2000" step="10">
+                </div>
+               
             </div>
-            <div>
-                <input type="radio" id="logoWanda" name="predefinedLogo" value="wanda.svg">
-                <label for="logoWanda">Wanda</label>
+            
+            <div class="col-md-4">
+                <div class="logo-selection">
+                    <div class="form-group">
+                        <label class="custom-file-upload">
+                            <input type="file" class="form-control-file" id="logoInput"  accept="image/*" style="display: none;">
+                            Upload File
+                        </label>
+                    </div>
+                    <p>or</p>
+                    <label>Select a logo:</label>
+                    <div>
+                        <input type="radio" id="logoMtm" name="predefinedLogo" value="mtm.svg">
+                        <label for="logoMtm">MTM</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="logoWanda" name="predefinedLogo" value="wanda.svg">
+                        <label for="logoWanda">Wanda</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="logoStat" name="predefinedLogo" value="stat.svg">
+                        <label for="logoStat">Stat</label>
+                    </div>
+                     
+                </div>
             </div>
-            <div>
-                <input type="radio" id="logoStat" name="predefinedLogo" value="stat.svg">
-                <label for="logoStat">Stat</label>
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="campaignSource" placeholder="Campaign Source (utm_source)">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="campaignMedium" placeholder="Campaign Medium (utm_medium)">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="campaignID" placeholder="Campaign ID (utm_id)">
+                </div>
             </div>
+        </div>
           
 
   
-        <button onclick="generateQRCode()" class="btn btn-primary">Generate QR Code</button>
-        <div id="qrcode"></div>
+       
+        </div>
+
+        <div>
+            <button onclick="generateQRCode()" class="btn btn-primary">Generate QR Code</button>
+            <div id="qrcode"></div>
         </div>
 
         <!-- The Modal -->

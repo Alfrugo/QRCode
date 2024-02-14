@@ -3,20 +3,9 @@ function generateQRCode() {
     var resolution = document.getElementById("resolutionInput").value || 600; // Use default resolution if not specified
     var logoInput = document.getElementById("logoInput");
     var selectedLogo = document.querySelector('input[name="predefinedLogo"]:checked')?.value;
-    var source = document.getElementById("campaignSource").value;
-    var medium = document.getElementById("campaignMedium").value;
-    var campaignID = document.getElementById("campaignID").value;
-
-
-    // Construct campaign URL
-    var campaignURL = url + 
-        (source ? `?utm_source=${encodeURIComponent(source)}` : '') +
-        (medium ? `&utm_medium=${encodeURIComponent(medium)}` : '') +
-        (campaignID ? `&utm_id=${encodeURIComponent(campaignID)}` : '');
 
     var options = {
-        text:campaignURL,
-        // text: url,
+        text: url,
         width: parseInt(resolution),
         height: parseInt(resolution),
         colorDark: "#000000",

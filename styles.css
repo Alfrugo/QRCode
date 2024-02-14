@@ -8,13 +8,17 @@ body, html {
     background-color: #f0f0f0; /* Light grey background */
   }
 
+  .text-center {
+    display: block;
+  }
+
   .centered-container {
     background-color: #fff; /* White background */
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     width: auto;
-    max-width: 600px; /* Adjust based on your content */
+    max-width: 800px; /* Adjust based on your content */
   }
         .container {
         margin-top: 20px;
