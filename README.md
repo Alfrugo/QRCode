@@ -9,7 +9,7 @@ Our QR Code Generator is a modern, user-friendly web application designed to cre
 - **Optional Logo Upload**: Enhance branding by adding a logo to the QR code. This is optional, ensuring flexibility in QR code creation.
 
 ## Screenshots
-![Main Interface](https://private-user-images.githubusercontent.com/36056407/306790623-fddaca24-d92f-44ee-8821-e64b04b32cb7.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDg1NTU0NTEsIm5iZiI6MTcwODU1NTE1MSwicGF0aCI6Ii8zNjA1NjQwNy8zMDY3OTA2MjMtZmRkYWNhMjQtZDkyZi00NGVlLTg4MjEtZTY0YjA0YjMyY2I3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjIxVDIyMzkxMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTE5YWI1MWU1YTkyMGFkZWViZDA0MGExMjcyOWFhOWU4ODMzZDlhNjUyMzIwNDk4MGU4NjZiMjg1Mzk3M2U3ZDUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.eQq8DAjYSMCPRW_ECoKdb7Opk7HmGudG45s54ym784Q)
+![Main Interface](https://alfredo-diez.com/github/306790623-fddaca24-d92f-44ee-8821-e64b04b32cb7.gif)
 *The main interface of the QR Code Generator.*
 
 
